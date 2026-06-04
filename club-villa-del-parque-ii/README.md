@@ -157,8 +157,8 @@ El sistema contará con:
 
 ### Próximas etapas
 
-* [ ] Diseño de base de datos.
-* [ ] Creación del diagrama entidad-relación.
+* [X] Diseño de base de datos.
+* [X] Creación del diagrama entidad-relación.
 * [ ] Implementación del sistema de login.
 * [ ] Gestión de socios.
 * [ ] Gestión de deportes.

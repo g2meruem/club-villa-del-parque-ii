@@ -1,41 +1,34 @@
-from config.conexion import obtener_conexion
+from modulos.socios import (
+    agregar_socio,
+    listar_socios,
+    eliminar_socio
+)
 
 
-def agregar_socio():
+def menu_socios():
 
-    nombre = input("Nombre: ")
-    apellido = input("Apellido: ")
-    dni = input("DNI: ")
-    telefono = input("Telefono: ")
-    direccion = input("Direccion: ")
+    while True:
 
-    conexion = obtener_conexion()
+        print("\n--- SOCIOS ---")
 
-    cursor = conexion.cursor()
+        print("1. Agregar")
 
-    cursor.execute("""
-        INSERT INTO Socios
-        (
-            Nombre,
-            Apellido,
-            DNI,
-            Telefono,
-            Direccion,
-            TipoPersona
-        )
-        VALUES
-        (?, ?, ?, ?, ?, 'Socio')
-    """,
-    (
-        nombre,
-        apellido,
-        dni,
-        telefono,
-        direccion
-    ))
+        print("2. Listar")
 
-    conexion.commit()
+        print("3. Eliminar")
 
-    print("Socio agregado correctamente.")
+        print("0. Volver")
 
-    conexion.close()
+        opcion = input("Opcion: ")
+
+        if opcion == "1":
+            agregar_socio()
+
+        elif opcion == "2":
+            listar_socios()
+
+        elif opcion == "3":
+            eliminar_socio()
+
+        elif opcion == "0":
+            break

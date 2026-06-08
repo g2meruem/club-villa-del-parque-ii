@@ -131,40 +131,51 @@ Microsoft SQL Server
 
 ## Estructura del Proyecto
 
+```text
 club-villa-del-parque-ii/
 
 ├── app.py
 │
 ├── config/
-│ └── db.py
+│   └── db.py
 │
 ├── routes/
-│ ├── auth.py
-│ ├── socios.py
-│ ├── deportes.py
-│ ├── pagos.py
-│ └── reportes.py
+│   ├── auth.py
+│   ├── socios.py
+│   ├── deportes.py
+│   ├── pagos.py
+│   └── reportes.py
 │
 ├── templates/
-│ ├── base.html
-│ ├── login.html
-│ ├── dashboard.html
-│ │
-│ ├── socios/
-│ ├── pagos/
-│ └── reportes/
+│   ├── base.html
+│   ├── login.html
+│   ├── dashboard.html
+│   │
+│   ├── socios/
+│   │   ├── listar.html
+│   │   ├── crear.html
+│   │   └── editar.html
+│   │
+│   ├── pagos/
+│   │   ├── listar.html
+│   │   └── registrar.html
+│   │
+│   └── reportes/
+│       └── mensual.html
 │
 ├── static/
-│ ├── css/
-│ ├── js/
-│ └── img/
+│   ├── css/
+│   ├── js/
+│   └── img/
 │
 ├── database/
-│ └── ClubVillaDelParqueII.sql
+│   └── ClubVillaDelParqueII.sql
 │
 ├── requirements.txt
 │
 └── README.md
+```
+
 
 ---
 

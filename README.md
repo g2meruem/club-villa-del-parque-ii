@@ -1,28 +1,115 @@
-# Sistema de Gestión Deportiva - Club Villa del Parque II
+# Sistema de Gestión Deportiva Web - Club Villa del Parque II
 
 ## Descripción
 
-Este proyecto consiste en el desarrollo de un sistema administrativo para el **Club Deportivo Villa del Parque II**, implementado en **Python** y **SQL**, con el objetivo de facilitar la gestión de socios, actividades deportivas, cuotas, pagos y rendiciones mensuales.
+Sistema web de gestión administrativa para el Club Deportivo Villa del Parque II, desarrollado con Python, Flask y Microsoft SQL Server.
 
-El sistema busca digitalizar los procesos administrativos del club, permitiendo un control más eficiente de la información y una mejor organización de los recursos.
-
----
-
-## Objetivos del Proyecto
-
-* Administrar socios, no socios e invitados.
-* Gestionar inscripciones a actividades deportivas.
-* Controlar cuotas sociales y deportivas.
-* Emitir comprobantes de pago.
-* Generar informes y rendiciones mensuales.
-* Implementar acceso restringido mediante usuarios y roles.
-* Almacenar información de manera segura utilizando una base de datos SQL.
+El objetivo principal es digitalizar y optimizar la administración del club, permitiendo gestionar socios, deportes, inscripciones, pagos, comprobantes y rendiciones mensuales desde una interfaz web intuitiva y segura.
 
 ---
 
-## Deportes Incluidos
+## Objetivos
 
-El sistema contempla inicialmente la gestión de las siguientes disciplinas:
+### Objetivo General
+
+Desarrollar una aplicación web que permita administrar las actividades deportivas y financieras del Club Villa del Parque II.
+
+### Objetivos Específicos
+
+* Gestionar socios, no socios e invitados.
+* Administrar disciplinas deportivas.
+* Registrar pagos y cuotas.
+* Emitir comprobantes.
+* Generar rendiciones mensuales.
+* Implementar control de acceso mediante usuarios y roles.
+* Almacenar la información en Microsoft SQL Server.
+
+---
+
+## Tecnologías Utilizadas
+
+### Backend
+
+* Python 3
+* Flask
+
+### Base de Datos
+
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
+
+### Frontend
+
+* HTML5
+* CSS3
+* Bootstrap 5
+* Jinja2
+
+### Conectividad
+
+* pyodbc
+
+### Control de Versiones
+
+* Git
+* GitHub
+
+---
+
+## Funcionalidades
+
+### Autenticación
+
+* Inicio de sesión.
+* Control de acceso por roles.
+* Gestión de usuarios autorizados.
+
+### Dashboard
+
+* Resumen de socios activos.
+* Pagos registrados.
+* Recaudación mensual.
+* Accesos rápidos a los módulos principales.
+
+### Gestión de Socios
+
+* Alta de socios.
+* Modificación de datos.
+* Baja lógica.
+* Consulta de información.
+
+### Gestión de Deportes
+
+* Administración de deportes.
+* Gestión de cuotas deportivas.
+* Consulta de inscriptos.
+
+### Inscripciones
+
+* Asociación de socios a deportes.
+* Consulta de inscripciones activas.
+
+### Gestión de Pagos
+
+* Registro de pagos.
+* Consulta de historial.
+* Control de cuotas.
+
+### Comprobantes
+
+* Generación automática de comprobantes.
+* Visualización e impresión.
+
+### Rendición Mensual
+
+* Cantidad de pagos.
+* Total recaudado.
+* Recaudación por deporte.
+* Informes administrativos.
+
+---
+
+## Deportes Gestionados
 
 * ⚽ Fútbol
 * 🏀 Básquet
@@ -30,113 +117,72 @@ El sistema contempla inicialmente la gestión de las siguientes disciplinas:
 
 ---
 
-## Funcionalidades Principales
+## Arquitectura del Sistema
 
-### Gestión de Usuarios
-
-* Inicio de sesión.
-* Control de acceso por roles.
-* Administración de usuarios autorizados.
-
-### Gestión de Socios
-
-* Alta de socios.
-* Modificación de datos.
-* Baja lógica de registros.
-* Consulta de información.
-
-### Gestión de No Socios e Invitados
-
-* Registro de participantes ocasionales.
-* Control de acceso a actividades.
-
-### Gestión de Deportes
-
-* Inscripción a disciplinas.
-* Consulta de participantes por deporte.
-* Control de cuotas deportivas.
-
-### Gestión de Pagos
-
-* Registro de pagos.
-* Historial de movimientos.
-* Control de cuotas vencidas.
-* Consulta de estados de cuenta.
-
-### Emisión de Comprobantes
-
-* Generación de comprobantes por pantalla.
-* Numeración automática.
-* Registro de fecha y concepto del pago.
-
-### Rendición de Cuentas
-
-* Ingresos mensuales.
-* Recaudación por actividad deportiva.
-* Reportes de pagos realizados.
-* Estadísticas administrativas.
+Navegador Web
+↓
+Flask (Backend)
+↓
+Lógica de Negocio
+↓
+Microsoft SQL Server
 
 ---
 
-## Tecnologías Utilizadas
+## Estructura del Proyecto
 
-### Lenguajes
-
-* Python
-
-### Base de Datos
-
-* Sql MS
-
-### Herramientas
-
-* Git
-* GitHub
-* Visual Studio Code
-
----
-
-## Estructura Inicial del Proyecto
-
-```text
 club-villa-del-parque-ii/
+
+├── app.py
+│
+├── config/
+│ └── db.py
+│
+├── routes/
+│ ├── auth.py
+│ ├── socios.py
+│ ├── deportes.py
+│ ├── pagos.py
+│ └── reportes.py
+│
+├── templates/
+│ ├── base.html
+│ ├── login.html
+│ ├── dashboard.html
+│ │
+│ ├── socios/
+│ ├── pagos/
+│ └── reportes/
+│
+├── static/
+│ ├── css/
+│ ├── js/
+│ └── img/
 │
 ├── database/
-│   ├── schema.sql
-│   └── club.db
+│ └── ClubVillaDelParqueII.sql
 │
-├── src/
-│   ├── main.py
-│   ├── login.py
-│   ├── socios.py
-│   ├── deportes.py
-│   ├── pagos.py
-│   ├── invitados.py
-│   └── reportes.py
+├── requirements.txt
 │
-├── docs/
-│   ├── proyecto.pdf
-│   ├── diagrama_er.png
-│   └── manual_usuario.pdf
-│
-├── README.md
-└── requirements.txt
-```
+└── README.md
 
 ---
 
-## Modelo de Datos
+## Base de Datos
 
-El sistema estará compuesto inicialmente por las siguientes entidades:
+La base de datos utilizará Microsoft SQL Server.
 
+Tablas principales:
+
+* Roles
 * Usuarios
 * Socios
 * Deportes
 * Inscripciones
 * Pagos
-* Invitados
+* Comprobantes
 
-Estas tablas estarán relacionadas para garantizar la integridad y consistencia de la información.
+Se reutilizará la estructura inicial diseñada para el proyecto, incorporando mejoras progresivas según sea necesario.
 
 ---
 
@@ -145,27 +191,81 @@ Estas tablas estarán relacionadas para garantizar la integridad y consistencia 
 El sistema contará con:
 
 * Autenticación mediante usuario y contraseña.
-* Roles de acceso.
+* Control de acceso por roles.
 * Restricción de funciones administrativas.
-* Protección de información sensible.
+* Protección de sesiones mediante Flask.
 
 ---
 
-## Estado del Proyecto
+## Hoja de Ruta del Proyecto
+
+### Fase 1 - Diseño y Preparación
+
+* [X] Definición de requerimientos.
+* [X] Diseño de la base de datos.
+* [X] Configuración del repositorio GitHub.
+* [ ] Configuración del entorno Flask.
+
+### Fase 2 - Base de Datos
+
+* [ ] Creación de la base de datos en SQL Server.
+* [ ] Creación de tablas y relaciones.
+* [ ] Inserción de datos iniciales.
+* [ ] Creación de vistas y procedimientos almacenados.
+
+### Fase 3 - Backend Flask
+
+* [ ] Configuración de Flask.
+* [ ] Conexión con SQL Server.
+* [ ] Sistema de autenticación.
+* [ ] Gestión de sesiones.
+
+### Fase 4 - Gestión de Socios
+
+* [ ] Alta de socios.
+* [ ] Modificación de socios.
+* [ ] Baja lógica.
+* [ ] Búsquedas y filtros.
+
+### Fase 5 - Gestión Deportiva
+
+* [ ] Administración de deportes.
+* [ ] Inscripciones.
+* [ ] Gestión de cuotas.
+
+### Fase 6 - Pagos
+
+* [ ] Registro de pagos.
+* [ ] Historial de movimientos.
+* [ ] Comprobantes.
+
+### Fase 7 - Reportes
+
+* [ ] Rendición mensual.
+* [ ] Estadísticas.
+* [ ] Informes administrativos.
+
+### Fase 8 - Interfaz y Mejoras
+
+* [ ] Diseño responsive con Bootstrap.
+* [ ] Validaciones.
+* [ ] Mejoras visuales.
+* [ ] Optimización general.
+
+### Fase 9 - Documentación
+
+* [ ] Manual de usuario.
+* [ ] Diagrama entidad-relación.
+* [ ] Documentación técnica.
+* [ ] Presentación final.
+
+---
+
+## Estado Actual
 
 🚧 En desarrollo
 
-### Próximas etapas
-
-* [X] Diseño de base de datos.
-* [X] Creación del diagrama entidad-relación.
-* [ ] Implementación del sistema de login.
-* [ ] Gestión de socios.
-* [ ] Gestión de deportes.
-* [ ] Gestión de pagos.
-* [ ] Emisión de comprobantes.
-* [ ] Rendición mensual.
-* [ ] Pruebas y documentación final.
+Versión objetivo: 1.0
 
 ---
 
@@ -177,4 +277,4 @@ El sistema contará con:
 
 ## Licencia
 
-Proyecto académico desarrollado con fines educativos para la materia de Técnicas de programación y Bases de Datos - IFTS 16° - Año 2026.
+Proyecto académico desarrollado con fines educativos para la materia de Técnicas de programación y Bases de Datos - Año 2026.

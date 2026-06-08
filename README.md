@@ -1,20 +1,20 @@
-# Sistema de Gestión Deportiva Web - Club Villa del Parque II
+# Sistema de Gestión Deportiva - Club Villa del Parque II
 
 ## Descripción
 
-Sistema web de gestión administrativa para el Club Deportivo Villa del Parque II, desarrollado con Python, Flask y Microsoft SQL Server.
+Sistema de gestión administrativa desarrollado en Python para el Club Deportivo Villa del Parque II.
 
-El objetivo principal es digitalizar y optimizar la administración del club, permitiendo gestionar socios, deportes, inscripciones, pagos, comprobantes y rendiciones mensuales desde una interfaz web intuitiva y segura.
+La aplicación permitirá administrar socios, actividades deportivas, inscripciones, pagos, comprobantes y rendiciones mensuales mediante una interfaz gráfica desarrollada con Tkinter y almacenamiento de datos en Microsoft SQL Server.
 
 ---
 
-## Objetivos
+# Objetivos
 
-### Objetivo General
+## Objetivo General
 
-Desarrollar una aplicación web que permita administrar las actividades deportivas y financieras del Club Villa del Parque II.
+Desarrollar una aplicación de escritorio que permita gestionar de manera eficiente la administración del Club Villa del Parque II.
 
-### Objetivos Específicos
+## Objetivos Específicos
 
 * Gestionar socios, no socios e invitados.
 * Administrar disciplinas deportivas.
@@ -26,90 +26,80 @@ Desarrollar una aplicación web que permita administrar las actividades deportiv
 
 ---
 
-## Tecnologías Utilizadas
+# Tecnologías Utilizadas
 
-### Backend
+## Lenguaje
 
 * Python 3
-* Flask
 
-### Base de Datos
+## Base de Datos
 
 * Microsoft SQL Server
 * SQL Server Management Studio (SSMS)
 
-### Frontend
+## Interfaz Gráfica
 
-* HTML5
-* CSS3
-* Bootstrap 5
-* Jinja2
+* Tkinter
+* ttk (Treeview)
 
-### Conectividad
+## Conectividad
 
 * pyodbc
 
-### Control de Versiones
+## Control de Versiones
 
 * Git
 * GitHub
 
 ---
 
-## Funcionalidades
+# Funcionalidades
 
-### Autenticación
+## Autenticación
 
 * Inicio de sesión.
+* Gestión de usuarios.
 * Control de acceso por roles.
-* Gestión de usuarios autorizados.
 
-### Dashboard
-
-* Resumen de socios activos.
-* Pagos registrados.
-* Recaudación mensual.
-* Accesos rápidos a los módulos principales.
-
-### Gestión de Socios
+## Gestión de Socios
 
 * Alta de socios.
 * Modificación de datos.
 * Baja lógica.
-* Consulta de información.
+* Consulta y búsqueda.
 
-### Gestión de Deportes
+## Gestión Deportiva
 
 * Administración de deportes.
-* Gestión de cuotas deportivas.
+* Gestión de cuotas.
 * Consulta de inscriptos.
 
-### Inscripciones
+## Inscripciones
 
 * Asociación de socios a deportes.
 * Consulta de inscripciones activas.
 
-### Gestión de Pagos
+## Gestión de Pagos
 
 * Registro de pagos.
 * Consulta de historial.
 * Control de cuotas.
 
-### Comprobantes
+## Comprobantes
 
 * Generación automática de comprobantes.
-* Visualización e impresión.
+* Visualización por pantalla.
 
-### Rendición Mensual
+## Rendición Mensual
 
-* Cantidad de pagos.
 * Total recaudado.
-* Recaudación por deporte.
-* Informes administrativos.
+* Cantidad de pagos.
+* Recaudación por actividad.
+* Estadísticas administrativas.
 
 ---
 
-## Deportes Gestionados
+# Deportes Gestionados
 
 * ⚽ Fútbol
 * 🏀 Básquet
@@ -117,71 +107,56 @@ Desarrollar una aplicación web que permita administrar las actividades deportiv
 
 ---
 
-## Arquitectura del Sistema
+# Arquitectura del Sistema
 
-Navegador Web
+Interfaz Gráfica (Tkinter)
 ↓
-Flask (Backend)
-↓
-Lógica de Negocio
+Lógica de Negocio (Python)
 ↓
 Microsoft SQL Server
 
 ---
 
-## Estructura del Proyecto
+# Estructura del Proyecto
 
 ```text
 club-villa-del-parque-ii/
 
-├── app.py
+├── main.py
 │
 ├── config/
-│   └── db.py
+│   └── conexion.py
 │
-├── routes/
-│   ├── auth.py
+├── vistas/
+│   ├── login.py
+│   ├── dashboard.py
 │   ├── socios.py
 │   ├── deportes.py
 │   ├── pagos.py
 │   └── reportes.py
 │
-├── templates/
-│   ├── base.html
-│   ├── login.html
-│   ├── dashboard.html
-│   │
-│   ├── socios/
-│   │   ├── listar.html
-│   │   ├── crear.html
-│   │   └── editar.html
-│   │
-│   ├── pagos/
-│   │   ├── listar.html
-│   │   └── registrar.html
-│   │
-│   └── reportes/
-│       └── mensual.html
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── img/
+├── modelos/
+│   ├── usuario.py
+│   ├── socio.py
+│   ├── deporte.py
+│   └── pago.py
 │
 ├── database/
 │   └── ClubVillaDelParqueII.sql
+│
+├── assets/
+│   └── logo.png
 │
 ├── requirements.txt
 │
 └── README.md
 ```
 
-
 ---
 
-## Base de Datos
+# Base de Datos
 
-La base de datos utilizará Microsoft SQL Server.
+La aplicación utilizará Microsoft SQL Server como sistema gestor de base de datos.
 
 Tablas principales:
 
@@ -193,86 +168,81 @@ Tablas principales:
 * Pagos
 * Comprobantes
 
-Se reutilizará la estructura inicial diseñada para el proyecto, incorporando mejoras progresivas según sea necesario.
-
 ---
 
-## Seguridad
+# Seguridad
 
 El sistema contará con:
 
 * Autenticación mediante usuario y contraseña.
 * Control de acceso por roles.
 * Restricción de funciones administrativas.
-* Protección de sesiones mediante Flask.
+* Protección de operaciones sensibles.
 
 ---
 
-## Hoja de Ruta del Proyecto
+# Hoja de Ruta del Proyecto
 
-### Fase 1 - Diseño y Preparación
+## Fase 1 - Diseño
 
 * [X] Definición de requerimientos.
-* [X] Diseño de la base de datos.
-* [X] Configuración del repositorio GitHub.
-* [ ] Configuración del entorno Flask.
+* [X] Diseño de base de datos.
+* [X] Configuración del repositorio.
 
-### Fase 2 - Base de Datos
+## Fase 2 - Base de Datos
 
-* [ ] Creación de la base de datos en SQL Server.
-* [ ] Creación de tablas y relaciones.
-* [ ] Inserción de datos iniciales.
-* [ ] Creación de vistas y procedimientos almacenados.
+* [X] Creación de tablas.
+* [X] Relaciones y restricciones.
+* [X] Datos iniciales.
+* [X] Procedimientos almacenados.
 
-### Fase 3 - Backend Flask
+## Fase 3 - Infraestructura
 
-* [ ] Configuración de Flask.
-* [ ] Conexión con SQL Server.
-* [ ] Sistema de autenticación.
-* [ ] Gestión de sesiones.
+* [X] Configuración del proyecto Python.
+* [X] Conexión con SQL Server.
+* [X] Estructura modular.
 
-### Fase 4 - Gestión de Socios
+## Fase 4 - Login
 
-* [ ] Alta de socios.
-* [ ] Modificación de socios.
-* [ ] Baja lógica.
-* [ ] Búsquedas y filtros.
+* [ ] Inicio de sesión.
+* [ ] Validación de usuarios.
+* [ ] Gestión de roles.
 
-### Fase 5 - Gestión Deportiva
+## Fase 5 - Gestión de Socios
+
+* [ ] Alta.
+* [ ] Modificación.
+* [ ] Baja.
+* [ ] Búsqueda.
+
+## Fase 6 - Gestión Deportiva
 
 * [ ] Administración de deportes.
 * [ ] Inscripciones.
-* [ ] Gestión de cuotas.
+* [ ] Consulta de participantes.
 
-### Fase 6 - Pagos
+## Fase 7 - Gestión de Pagos
 
 * [ ] Registro de pagos.
-* [ ] Historial de movimientos.
+* [ ] Historial.
 * [ ] Comprobantes.
 
-### Fase 7 - Reportes
+## Fase 8 - Reportes
 
 * [ ] Rendición mensual.
 * [ ] Estadísticas.
-* [ ] Informes administrativos.
+* [ ] Informes.
 
-### Fase 8 - Interfaz y Mejoras
+## Fase 9 - Finalización
 
-* [ ] Diseño responsive con Bootstrap.
-* [ ] Validaciones.
-* [ ] Mejoras visuales.
-* [ ] Optimización general.
-
-### Fase 9 - Documentación
-
+* [ ] Pruebas.
 * [ ] Manual de usuario.
-* [ ] Diagrama entidad-relación.
 * [ ] Documentación técnica.
 * [ ] Presentación final.
 
 ---
 
-## Estado Actual
+# Estado del Proyecto
 
 🚧 En desarrollo
 
@@ -280,12 +250,12 @@ Versión objetivo: 1.0
 
 ---
 
-## Integrantes
+# Integrante
 
 * Gastón Toranzo
 
 ---
 
-## Licencia
+# Licencia
 
 Proyecto académico desarrollado con fines educativos para la materia de Técnicas de programación y Bases de Datos - Año 2026.

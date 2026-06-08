@@ -191,22 +191,22 @@ El sistema contará con:
 
 ## Fase 2 - Base de Datos
 
-* [ ] Creación de tablas.
-* [ ] Relaciones y restricciones.
-* [ ] Datos iniciales.
-* [ ] Procedimientos almacenados.
+* [X] Creación de tablas.
+* [X] Relaciones y restricciones.
+* [X] Datos iniciales.
+* [X] Procedimientos almacenados.
 
 ## Fase 3 - Infraestructura
 
-* [ ] Configuración del proyecto Python.
-* [ ] Conexión con SQL Server.
-* [ ] Estructura modular.
+* [X] Configuración del proyecto Python.
+* [X] Conexión con SQL Server.
+* [X] Estructura modular.
 
 ## Fase 4 - Login
 
-* [ ] Inicio de sesión.
-* [ ] Validación de usuarios.
-* [ ] Gestión de roles.
+* [X] Inicio de sesión.
+* [X] Validación de usuarios.
+* [X] Gestión de roles.
 
 ## Fase 5 - Gestión de Socios
 

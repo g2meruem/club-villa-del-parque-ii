@@ -122,34 +122,30 @@ Microsoft SQL Server
 ```text
 club-villa-del-parque-ii/
 
-├── main.py
 │
 ├── config/
 │   └── conexion.py
+│
+├── modelos/
+│   ├── usuario.py
+│   ├── socio.py
+│   ├── deporte.py
+│   ├── inscripcion.py
+│   ├── pago.py
+│   ├── invitado.py
+│   └── reportes.py
 │
 ├── vistas/
 │   ├── login.py
 │   ├── dashboard.py
 │   ├── socios.py
 │   ├── deportes.py
+│   ├── inscripciones.py
 │   ├── pagos.py
+│   ├── invitados.py
 │   └── reportes.py
 │
-├── modelos/
-│   ├── usuario.py
-│   ├── socio.py
-│   ├── deporte.py
-│   └── pago.py
-│
-├── database/
-│   └── ClubVillaDelParqueII.sql
-│
-├── assets/
-│   └── logo.png
-│
-├── requirements.txt
-│
-└── README.md
+└── main.py
 ```
 
 ---
@@ -210,43 +206,43 @@ El sistema contará con:
 
 ## Fase 5 - Gestión de Socios
 
-* [ ] Alta.
-* [ ] Modificación.
-* [ ] Baja.
-* [ ] Búsqueda.
+* [X] Alta.
+* [X] Modificación.
+* [X] Baja.
+* [X] Búsqueda.
 
 ## Fase 6 - Gestión Deportiva
 
-* [ ] Administración de deportes.
-* [ ] Inscripciones.
-* [ ] Consulta de participantes.
+* [X] Administración de deportes.
+* [X] Inscripciones.
+* [X] Consulta de participantes.
 
 ## Fase 7 - Gestión de Pagos
 
-* [ ] Registro de pagos.
-* [ ] Historial.
-* [ ] Comprobantes.
+* [X] Registro de pagos.
+* [X] Historial.
+* [X] Comprobantes.
 
 ## Fase 8 - Reportes
 
-* [ ] Rendición mensual.
-* [ ] Estadísticas.
-* [ ] Informes.
+* [X] Rendición mensual.
+* [X] Estadísticas.
+* [X] Informes.
 
 ## Fase 9 - Finalización
 
-* [ ] Pruebas.
-* [ ] Manual de usuario.
-* [ ] Documentación técnica.
+* [X] Pruebas.
+* [X] Manual de usuario.
+* [X] Documentación técnica.
 * [ ] Presentación final.
 
 ---
 
 # Estado del Proyecto
 
-🚧 En desarrollo
+Finalizado
 
-Versión objetivo: 1.0
+Versión actual: 1.0.0
 
 ---
 

@@ -1,11 +1,35 @@
 import tkinter as tk
+
 from vistas.socios import VentanaSocios
+from vistas.deportes import VentanaDeportes
+from vistas.inscripciones import VentanaInscripciones
+from vistas.pagos import VentanaPagos
+from vistas.reportes import VentanaReportes
+from vistas.invitados import VentanaInvitados
 
 class VentanaDashboard:
+
     def abrir_socios(self):
 
         VentanaSocios()
-        
+
+    def abrir_deportes(self):
+
+        VentanaDeportes()
+
+    def abrir_inscripciones(self):
+
+        VentanaInscripciones()
+    def abrir_pagos(self):
+
+        VentanaPagos()
+    def abrir_reportes(self):
+
+        VentanaReportes()
+    def abrir_invitados(self):
+
+        VentanaInvitados()
+
     def __init__(self, usuario, rol):
 
         self.ventana = tk.Tk()
@@ -14,7 +38,7 @@ class VentanaDashboard:
             "Dashboard - Club Villa del Parque II"
         )
 
-        self.ventana.geometry("600x400")
+        self.ventana.geometry("600x450")
 
         self.usuario = usuario
         self.rol = rol
@@ -57,19 +81,34 @@ class VentanaDashboard:
         tk.Button(
             self.ventana,
             text="Gestión de Deportes",
-            width=30
+            width=30,
+            command=self.abrir_deportes
+        ).pack(pady=5)
+
+        tk.Button(
+            self.ventana,
+            text="Inscripciones",
+            width=30,
+            command=self.abrir_inscripciones
         ).pack(pady=5)
 
         tk.Button(
             self.ventana,
             text="Pagos",
-            width=30
+            width=30,
+            command=self.abrir_pagos
         ).pack(pady=5)
-
+        tk.Button(
+            self.ventana,
+            text="Invitados",
+            width=30,
+            command=self.abrir_invitados
+        ).pack(pady=5)
         tk.Button(
             self.ventana,
             text="Reportes",
-            width=30
+            width=30,
+            command=self.abrir_reportes
         ).pack(pady=5)
 
         tk.Button(

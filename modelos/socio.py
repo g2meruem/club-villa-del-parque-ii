@@ -134,4 +134,26 @@ class Socio:
 
         conexion.close()
 
-        return resultado    
+        return resultado  
+    @staticmethod
+    def obtener_activos():
+
+        conexion = obtener_conexion()
+
+        cursor = conexion.cursor()
+
+        cursor.execute("""
+            SELECT
+                IdSocio,
+                Nombre,
+                Apellido
+            FROM Socios
+            WHERE Activo = 1
+            ORDER BY Apellido
+        """)
+
+        resultado = cursor.fetchall()
+
+        conexion.close()
+
+        return resultado

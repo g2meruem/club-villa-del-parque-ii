@@ -1,5 +1,4 @@
 import tkinter as tk
-
 from vistas.socios import VentanaSocios
 from vistas.deportes import VentanaDeportes
 from vistas.inscripciones import VentanaInscripciones
